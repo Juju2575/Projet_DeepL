@@ -18,3 +18,21 @@ Executer les notebooks
 ## CSV Files
 
 ## Notebooks
+### 00 exploration
+Notebook d'exploration du dataset Kaggle
+- Observation des catégories et de la répartition des articles
+- Création et sauvegarde d'un nuage de mot
+- Premiers tests de tokenization
+
+### 01 TFIDF
+Notebook regroupant nos premières approches de topic modeling à l'aide de modèles de Machine Learning classique.
+- Partie préprocessing du texte des articles et création d'un dataset "clean" (cette partie est commentée dans le notebook car met beaucoup de temps à s'exécuter)
+- Creation d'une matrice TFIDF à partir des articles 
+- Prédiction des topics
+    - Naive Bayes
+    - K-NN
+    - Decision Tree
+    - Random Forest
+    - Logistic Regression
+
+    
