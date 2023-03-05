@@ -35,4 +35,15 @@ Notebook regroupant nos premières approches de topic modeling à l'aide de mod�
     - Random Forest
     - Logistic Regression
 
-    
+### 02 Tokenization 
+Notebook utilisé pour la tokenization du texte.
+
+### 03 RNN
+Implémentation d'un RNN pour la classification des articles. N'est pas encore abouti.
+
+### 04 Transformers
+Utilisation de la librairie Transformers de Hugging Face.
+- BART
+- BERT
+- DistilBERT
+BERT et DistilBERT ne sont pas encore abouti.
