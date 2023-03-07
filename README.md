@@ -10,7 +10,7 @@ Nous avions initialement envisagé d'étendre le projet afin d'inclure d'autres 
 ## Données utilisées
 Nous n’avons travaillé que sur des datasets d’articles en anglais.
 - News Article Category Dataset : Dataset d'un challenge Kaggle regroupant 6877 articles (titre, corps et categorie) postés sur le site du Huffingtion Post
-- ...
+- Articles sharing and reading from CI&T DeskDrop : 3k articles shared in the company internal tool
 
 ## How to Run
 Executer les notebooks
@@ -42,6 +42,8 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 - Tokenization
 - Loi de Zipf
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
+
+Une implementation est disponible dans le dossier LDA : Notebook 
 
 ### 03 RNN
 Implémentation d'un RNN pour la classification des articles. N'est pas encore abouti.
