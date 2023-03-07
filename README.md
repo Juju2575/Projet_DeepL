@@ -43,7 +43,8 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 - Loi de Zipf
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
 
-Une implementation est disponible dans le dossier LDA : Notebook 
+Une implementation est disponible dans le dossier LDA : Notebooks LDA/LDA_original et LDA/LDA_applied.
+We also used bigrams as tokens to get more relevant topics.
 
 ### 03 RNN
 Implémentation d'un RNN pour la classification des articles. N'est pas encore abouti.
