@@ -35,8 +35,13 @@ Notebook regroupant nos premières approches de topic modeling à l'aide de mod�
     - Random Forest
     - Logistic Regression
 
-### 02 Tokenization 
-Notebook utilisé pour la tokenization du texte.
+### 02 Gensim LDA 
+Notebook utilisé pour nos premiers tests sur Gensim.
+- Calcul de la longueur des articles
+- Profile Report
+- Tokenization
+- Loi de Zipf
+- Topic Modeling par LDA à l'aide de la bibliothèque Gensim
 
 ### 03 RNN
 Implémentation d'un RNN pour la classification des articles. N'est pas encore abouti.
