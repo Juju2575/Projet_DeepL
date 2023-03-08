@@ -13,7 +13,8 @@ Nous n’avons travaillé que sur des datasets d’articles en anglais.
 - Articles sharing and reading from CI&T DeskDrop : 3k articles shared in the company internal tool
 
 ## How to Run
-Executer les notebooks
+Executer les notebooks.
+Pour les notebooks dans le dossier LDA, il est recommandé de créer un nouvel environnement virtuel (La première céllule propose de télécharger les librairies avec pip).
 
 ## CSV Files
 
@@ -43,9 +44,6 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 - Loi de Zipf
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
 
-Une implementation est disponible dans le dossier LDA : Notebooks LDA/LDA_original et LDA/LDA_applied.
-We also used bigrams as tokens to get more relevant topics.
-
 ### 03 RNN
 Implémentation d'un RNN pour la classification des articles. N'est pas encore abouti.
 
@@ -55,3 +53,14 @@ Utilisation de la librairie Transformers de Hugging Face.
 - BERT
 - DistilBERT
 BERT et DistilBERT ne sont pas encore abouti.
+
+
+### LDA Folder
+
+Une implementation plus poussée du modèle LDA est disponible dans le dossier LDA : Notebooks LDA/LDA_original.ipynb et LDA/LDA_applied.ipynb
+Nous avons rajouté des paires de mots dans le dictionnaire afin de pouvoir retrouver des thématiques sur 2 mots (Silicon Valley, social media, ...).
+
+Pour télécharger gensim, il est conseillé de créer un environnement virtuel car la version de numpy utilisée est spécifique.
+Il suffit de lancer la première cellule de code dans LDA_applied.ipynb ou LDA_original.ipynb
+
+Cette partie a été inspirée par ce projet kaggle : https://www.kaggle.com/code/gspmoreira/deskdrop-articles-topic-modeling.
