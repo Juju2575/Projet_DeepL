@@ -12,7 +12,7 @@ Nous n’avons travaillé que sur des datasets d’articles en anglais.
 - News Article Category Dataset : Dataset d'un challenge Kaggle regroupant 6877 articles (titre, corps et categorie) postés sur le site du Huffingtion Post
 - Articles sharing and reading from CI&T DeskDrop : 3k articles shared in the company internal tool
 
-Un version prétaitées du premier dataset est stockées dans le csv news-article-categories-clean. 
+Un version pré-traitées du premier dataset est stockées dans le csv news-article-categories-clean. 
 Les transformations suivantes ont été appliquées:
 - Conservation des caractères alphabétiques uniquement
 - Suppression des stopwords
@@ -65,7 +65,7 @@ Utilisation de la librairie Transformers de Hugging Face.
 BERT et DistilBERT ne sont pas encore abouti. Il aurait également fallu fine-tuner BART afin d'obtenir de meilleurs résultats.
 
 
-### LDA Folder
+## LDA Folder
 
 Une implementation plus poussée du modèle LDA est disponible dans le dossier LDA : Notebooks LDA/LDA_original.ipynb et LDA/LDA_applied.ipynb
 Nous avons rajouté des paires de mots dans le dictionnaire afin de pouvoir retrouver des thématiques sur 2 mots (Silicon Valley, social media, ...).
