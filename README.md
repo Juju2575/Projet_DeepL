@@ -13,7 +13,8 @@ Nous n’avons travaillé que sur des datasets d’articles en anglais.
 - Articles sharing and reading from CI&T DeskDrop : 3k articles shared in the company internal tool
 
 ## How to Run
-Executer les notebooks
+Executer les notebooks.
+Pour les notebooks dans le dossier LDA, il est recommandé de créer un nouvel environnement virtuel (La première céllule propose de télécharger les librairies avec pip).
 
 ## CSV Files
 
