@@ -12,11 +12,15 @@ Nous n’avons travaillé que sur des datasets d’articles en anglais.
 - News Article Category Dataset : Dataset d'un challenge Kaggle regroupant 6877 articles (titre, corps et categorie) postés sur le site du Huffingtion Post
 - Articles sharing and reading from CI&T DeskDrop : 3k articles shared in the company internal tool
 
+Un version prétaitées du premier dataset est stockées dans le csv news-article-categories-clean. 
+Les transformations suivantes ont été appliquées:
+- Conservation des caractères alphabétiques uniquement
+- Suppression des stopwords
+- Lemmatisation 
+
 ## How to Run
 Executer les notebooks.
 Pour les notebooks dans le dossier LDA, il est recommandé de créer un nouvel environnement virtuel (La première céllule propose de télécharger les librairies avec pip).
-
-## CSV Files
 
 ## Notebooks
 ### 00 exploration
@@ -45,14 +49,20 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
 
 ### 03 RNN
-Implémentation d'un RNN pour la classification des articles. N'est pas encore abouti.
+Implémentation de RNN pour la classification des articles.
+
+Plusieurs tests on été réalisés avec:
+- Un RNN simple à 3 couches cachées
+- Une succession de 3 RNN à 3 couches cachées 
+
+Les deux modèles marchent, mais avec plus de temps nous aurions pu tester plus d'hyperparamètres afin d'améliorer la précision.
 
 ### 04 Transformers
 Utilisation de la librairie Transformers de Hugging Face.
 - BART
 - BERT
 - DistilBERT
-BERT et DistilBERT ne sont pas encore abouti.
+BERT et DistilBERT ne sont pas encore abouti. Il aurait également fallu fine-tuner BART afin d'obtenir de meilleurs résultats.
 
 
 ### LDA Folder
