@@ -24,12 +24,19 @@ Pour les notebooks dans le dossier LDA, il est recommandé de créer un nouvel e
 
 ## Notebooks
 ### 00 exploration
-Notebook d'exploration du dataset Kaggle
+Notebook d'exploration du dataset Kaggle.
 - Observation des catégories et de la répartition des articles
+
+Cette base de données contient 14 catégories. L'ensemble des articles est plus ou moins bien réparti entre ces catégories, sauf pour la première (ART & CULTURE), qui en contient deux fois plus.
+
 <img src="Results/dataset_categories.png" alt="Dataset Categories" width=500>
 
 - Création et sauvegarde d'un nuage de mot
+
+On constate l'apparition de beaucoup de stopwords, mots récurrents ne contenant pas beaucoup d'information ("said", "even", etc.)
+
 <img src="Notebooks/dataset_wc.png" alt="Word Cloud" width=500>
+
 - Premiers tests de tokenization
 
 ### 01 TFIDF
@@ -48,11 +55,13 @@ Notebook regroupant nos premières approches de topic modeling à l'aide de mod�
     - Decision Tree
     - Random Forest
 
-    <img src="Results/Random_Forest_classification_report.png" alt="Naive Bayes" width=300>
+    <img src="Results/Random_forest_classification_report.png" alt="Random Forest" width=300>
 
     - Logistic Regression
 
-    <img src="Results/Logistic_Reg_classification_report.png" alt="Naive Bayes" width=300>
+    <img src="Results/Logistic_Reg_classification_report.png" alt="Logistic  Regression" width=300>
+
+Les deux derniers modèles overfit un peu. 
 
 ### 02 Gensim LDA 
 Notebook utilisé pour nos premiers tests sur Gensim.
@@ -61,20 +70,40 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 - Tokenization
 - Loi de Zipf
 
+Nous vérifions que la loi de Zipf s'applique pour ce corpus de texte. Cette loi stipule que la fréquence d’utilisation d’un mot dans un texte volumineux est inversement proportionnelle à son rang.
+
 <img src="Results/Zipf_Law.png" alt="Zipf Law" width=500>
 
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
 
-<img src="Results/Topic_modelling_Gensim_LDA.png" alt="Naive Bayes" width=700>
+Avant d'appliquer le modèle LDA au corpus, on retire des articles les stopwords de la bibliothèque nltk, auquel nous avons également ajouté nos propres stopwords personnalisés.
+
+Néanmoins, lorsque l'on essaie de mettre en avant 14 topics différents, nous remarquons qu'il en subsiste énormément. Cela fausse les catégories. 
+
+Nous avons choisi de perfectionner ce modèle pour améliorer les prédictions (cf rubrique LDA Folder).
+
+<img src="Results/Topic_modelling_Gensim_LDA.png" alt="LDA" width=700>
+
 
 ### 03 RNN
 Implémentation de RNN pour la classification des articles.
 
 Plusieurs tests on été réalisés avec:
 - Un RNN simple à 3 couches cachées
+
+On obtient la mtrice de confusion suivante:
+
+<img src="Results/Confusion_matrix_RNN1.png" alt="RNN1" width=700>
+
 - Une succession de 3 RNN à 3 couches cachées 
 
-Les deux modèles marchent, mais avec plus de temps nous aurions pu tester plus d'hyperparamètres afin d'améliorer la précision.
+On obtient la mtrice de confusion suivante:
+
+<img src="Results/Confusion_matrix_RNN2.png" alt="RNN2" width=700>
+
+On donne en entrée du RNN les 25 premiers mots du corps de l'article (dans sa version lemmatisée). Il est intéressant de noter que donner plus de mots en entrée n'améliore pas la précision du modèle (et a même plutôt tendance à dégrader les performances).
+
+Les deux réseaux donnent des résultats plutôt encourageants, mais avec plus de temps nous aurions pu tester plus d'hyperparamètres afin d'améliorer la précision.
 
 ### 04 Transformers
 Utilisation de la librairie Transformers de Hugging Face.
