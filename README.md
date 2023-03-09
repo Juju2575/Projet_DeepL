@@ -26,19 +26,33 @@ Pour les notebooks dans le dossier LDA, il est recommandé de créer un nouvel e
 ### 00 exploration
 Notebook d'exploration du dataset Kaggle
 - Observation des catégories et de la répartition des articles
+<img src="Results/dataset_categories.png" alt="Dataset Categories" width=500>
+
 - Création et sauvegarde d'un nuage de mot
+<img src="Notebooks/dataset_wc.png" alt="Word Cloud" width=500>
 - Premiers tests de tokenization
 
 ### 01 TFIDF
 Notebook regroupant nos premières approches de topic modeling à l'aide de modèles de Machine Learning classique.
-- Partie préprocessing du texte des articles et création d'un dataset "clean" (cette partie est commentée dans le notebook car met beaucoup de temps à s'exécuter)
+- Partie préprocessing du texte des articles et création d'un dataset "clean" (cette partie est commentée dans le notebook car met beaucoup de temps à s'exécuter). Le dataset traité est sauvegardé dans un csv.
 - Creation d'une matrice TFIDF à partir des articles 
 - Prédiction des topics
     - Naive Bayes
+
+    <img src="Results/Naive_Bayes_classification_report.png" alt="Naive Bayes" width=300>
+
     - K-NN
+
+    <img src="Results/KNN_classification_report.png" alt="KNN" width=300>
+
     - Decision Tree
     - Random Forest
+
+    <img src="Results/Random_Forest_classification_report.png" alt="Naive Bayes" width=300>
+
     - Logistic Regression
+
+    <img src="Results/Logistic_Reg_classification_report.png" alt="Naive Bayes" width=300>
 
 ### 02 Gensim LDA 
 Notebook utilisé pour nos premiers tests sur Gensim.
@@ -46,7 +60,12 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 - Profile Report
 - Tokenization
 - Loi de Zipf
+
+<img src="Results/Zipf_Law.png" alt="Zipf Law" width=500>
+
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
+
+<img src="Results/Topic_modelling_Gensim_LDA.png" alt="Naive Bayes" width=700>
 
 ### 03 RNN
 Implémentation de RNN pour la classification des articles.
