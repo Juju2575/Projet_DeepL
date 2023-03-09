@@ -110,6 +110,7 @@ Utilisation de la librairie Transformers de Hugging Face.
 - BART
 - BERT
 - DistilBERT
+
 BERT et DistilBERT ne sont pas encore abouti. Il aurait également fallu fine-tuner BART afin d'obtenir de meilleurs résultats.
 
 
