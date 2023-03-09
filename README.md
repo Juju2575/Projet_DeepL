@@ -72,7 +72,7 @@ Notebook utilisé pour nos premiers tests sur Gensim.
 
 Nous vérifions que la loi de Zipf s'applique pour ce corpus de texte. Cette loi stipule que la fréquence d’utilisation d’un mot dans un texte volumineux est inversement proportionnelle à son rang.
 
-<img src="Results/Zipf_Law.png" alt="Zipf Law" width=500>
+<img src="Results/Zipf_law.png" alt="Zipf Law" width=500>
 
 - Topic Modeling par LDA à l'aide de la bibliothèque Gensim
 
